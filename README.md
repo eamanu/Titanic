@@ -20,13 +20,33 @@ Los datos están divididos en dos grupos:
 * training set ("train.csv")
 * test set ("test.csv")
 
+El **training test** se usa para construir el modelo de ML. El modelo que se desarrolle se debe basar en las "features" que aparecen en el dataset, tales como genero o clase de los pasajeros. También se pueden utilizar [feature engineering](https://triangleinequality.wordpress.com/2013/09/08/basic-feature-engineering-with-the-titanic-data/).
 
-## Kernels utilizados
+El **test set** es utilizado para ver como el modelo que desarrollamos funciona.
+## Dicionario de Datos
+
+| Variable      | Definición    |
+| ------------- |---------------|
+| survival      | Sobreviviente |
+| pclass        | Clase         |
+| sex           | Sexo          |
+| Age           | Edad en años  |
+| sibsp         | # de Hermanos/ esposo/a|
+| parch         | # de Padres/Hijos|
+| ticket        | numero de ticket |
+| fare          | tarifa de pasajero|
+| cabin         | Numero de cabina|
+| embarked      | puerta de embarcación|
+
+
+
+
+# Kernels utilizados
 Par esta competencia existe una GRAN cantidad de kernels y análisis realizados. Los más interesantes son los siguientes:
 * [Pytanic](https://www.kaggle.com/headsortails/pytanic) - Heads or Tails
 * [Titanic-top-4-with-ensemble-modeling](https://www.kaggle.com/yassineghouzam/titanic-top-4-with-ensemble-modeling) - Yassine Ghouzam
 
-## Links de interés
+# Links de interés
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=EcU0qbV70rU" target="_blank"><img src="http://img.youtube.com/vi/EcU0qbV70rU/0.jpg"
 alt="Titanic" width="512" height="256" border="0" /></a>
