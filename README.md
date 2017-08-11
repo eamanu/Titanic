@@ -23,7 +23,7 @@ Los datos están divididos en dos grupos:
 El **training test** se usa para construir el modelo de ML. El modelo que se desarrolle se debe basar en las "features" que aparecen en el dataset, tales como genero o clase de los pasajeros. También se pueden utilizar [feature engineering](https://triangleinequality.wordpress.com/2013/09/08/basic-feature-engineering-with-the-titanic-data/).
 
 El **test set** es utilizado para ver como el modelo que desarrollamos funciona.
-## Dicionario de Datos
+## Diccionario de Datos
 
 | Variable      | Definición    |
 | ------------- |---------------|
