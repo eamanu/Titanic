@@ -64,6 +64,7 @@ def drawFirstVis(sobrev, nosobrev, sobre_color, nosobre_color):
 
 # drawFirstVis(sobrev, nosobrev, sobre_color, nosobre_color)
 
-tab = pd.crosstab(train['Parch'], train['Survived'])
+# tab = pd.crosstab(train['Parch'], train['Survived'])
+
 print(tab)
 
