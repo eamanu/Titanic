@@ -66,5 +66,52 @@ def drawFirstVis(sobrev, nosobrev, sobre_color, nosobre_color):
 
 # tab = pd.crosstab(train['Parch'], train['Survived'])
 
-print(tab)
+# print(tab)
+
+# Class 1 Male
+msobreClass1 = train[(train['Survived'] == 1) & (train['Sex'] == 'male') & (train['Pclass'] == 1)]
+mnosobreClass1 = train[(train['Survived'] == 0) & (train['Sex'] == 'male') & (train['Pclass'] == 1)]
+# Class 2 Male
+msobreClass2 = train[(train['Survived'] == 1) & (train['Sex'] == 'male') & (train['Pclass'] == 2)]
+mnosobreClass2 = train[(train['Survived'] == 0) & (train['Sex'] == 'male') & (train['Pclass'] == 2)]
+# Class 3 Male
+msobreClass3 = train[(train['Survived'] == 1) & (train['Sex'] == 'male') & (train['Pclass'] == 3)]
+mnosobreClass3 = train[(train['Survived'] == 0) & (train['Sex'] == 'male') & (train['Pclass'] == 3)]
+
+# Class 1 Female
+fsobreClass1 = train[(train['Survived'] == 1) & (train['Sex'] == 'female') & (train['Pclass'] == 1)]
+fnosobreClass1 = train[(train['Survived'] == 0) & (train['Sex'] == 'female') & (train['Pclass'] == 1)]
+# Class 2 Female
+fsobreClass2 = train[(train['Survived'] == 1) & (train['Sex'] == 'female') & (train['Pclass'] == 2)]
+fnosobreClass2 = train[(train['Survived'] == 0) & (train['Sex'] == 'female') & (train['Pclass'] == 2)]
+# Class 3 Female
+fsobreClass3 = train[(train['Survived'] == 1) & (train['Sex'] == 'female') & (train['Pclass'] == 3)]
+fnosobreClass3 = train[(train['Survived'] == 0) & (train['Sex'] == 'female') & (train['Pclass'] == 3)]
+
+plt.figure()
+plt.subplot(131)
+sns.distplot(msobreClass1['Age'].dropna().values, bins=range(0,100,1), color=sobre_color, label='Sobreviviente Clase 1')
+sns.distplot(mnosobreClass1['Age'].dropna().values, bins=range(0,100,1), color=nosobre_color, label='No sobreviviente Clase 1')
+plt.subplot(132)
+sns.distplot(msobreClass2['Age'].dropna().values, bins=range(0,100,1), color=sobre_color, label='Sobreviviente Clase 2')
+sns.distplot(mnosobreClass2['Age'].dropna().values, bins=range(0,100,1), color=nosobre_color, label='No sobreviviente Clase 2')
+plt.subplot(133)
+sns.distplot(msobreClass3['Age'].dropna().values, bins=range(0,100,1), color=sobre_color, label='Sobreviviente Clase 3')
+sns.distplot(mnosobreClass3['Age'].dropna().values, bins=range(0,100,1), color=nosobre_color, label='No sobreviviente Clase 3')
+plt.show()
+
+plt.figure()
+plt.subplot(131)
+sns.distplot(fsobreClass1['Age'].dropna().values, bins=range(0,100,1), color=sobre_color, label='Sobreviviente Clase 1')
+sns.distplot(fnosobreClass1['Age'].dropna().values, bins=range(0,100,1), color=nosobre_color, label='No sobreviviente Clase 1')
+plt.title("Class 1")
+plt.subplot(132)
+sns.distplot(fsobreClass2['Age'].dropna().values, bins=range(0,100,1), color=sobre_color, label='Sobreviviente Clase 2')
+sns.distplot(fnosobreClass2['Age'].dropna().values, bins=range(0,100,1), color=nosobre_color, label='No sobreviviente Clase 2')
+plt.title("Class 2")
+plt.subplot(133)
+sns.distplot(fsobreClass3['Age'].dropna().values, bins=range(0,100,1), color=sobre_color, label='Sobreviviente Clase 3')
+sns.distplot(fnosobreClass3['Age'].dropna().values, bins=range(0,100,1), color=nosobre_color, label='No sobreviviente Clase 3')
+plt.title("Class 3")
+plt.show()
 
