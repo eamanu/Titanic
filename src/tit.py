@@ -138,6 +138,7 @@ def ClassSexAge():
     sns.distplot(fnosobreClass3['Age'].dropna().values, bins=range(0, 100, 1),
                  color=nosobre_color, label='No sobreviviente Clase 3')
     plt.title("Class 3")
+
     plt.show()
 
 
